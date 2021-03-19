@@ -7,13 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DocumentComparisonUtility" />
-        <module name="langcomp" />
+        <module name="comparison-utility" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="DocumentComparisonUtility" target="8" />
-      <module name="langcomp" target="8" />
+      <module name="comparison-utility" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

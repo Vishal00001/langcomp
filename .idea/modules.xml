@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DocumentComparisonUtility.iml" filepath="$PROJECT_DIR$/DocumentComparisonUtility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comparison-utility.iml" filepath="$PROJECT_DIR$/comparison-utility.iml" />
     </modules>
   </component>
 </project>
