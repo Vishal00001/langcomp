@@ -2,15 +2,49 @@ package com.utility.comparisonutility;
 
 import com.utility.comparisonutility.utils.MathUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.stereotype.Service;
 
+import java.util.Scanner;
 import java.util.Stack;
 
 /**
  * Created by vishal on 18/3/21.
  */
-@Service
 public class PostfixNotation implements PolishNotation {
+
+    private Scanner sc;
+
+    public PostfixNotation(){
+        this.sc = new Scanner(System.in);
+    }
+
+    /**
+     * runPolishNotation method is a default implementatiion to run the polish notation
+     * @argument no arguments
+     * @return void
+     */
+    @Override
+    public void runPolishNotation() {
+
+        boolean flag = true;
+
+
+        while (flag) {
+            System.out.println("Please enter the expression:");
+            try {
+                System.out.println("Your result is: " + evalPostfix(sc.nextLine()));
+            } catch (Exception e) {
+                System.err.println(e.getStackTrace());
+            }
+
+            System.out.println("Do you want to continue? (Y/N)");
+            flag = StringUtils.equalsIgnoreCase(sc.nextLine().trim(), "Y") ? true : false;
+        }
+
+        if (!flag) {
+            System.out.println("Goodbye!");
+            System.exit(0);
+        }
+    }
 
     /**
      * evalPostfix method evaluate the Reverse Polish Notation
@@ -22,7 +56,7 @@ public class PostfixNotation implements PolishNotation {
         //Create a stack
         Stack<Double> stack = new Stack<>();
 
-        if(StringUtils.isBlank(exp)){
+        if(org.apache.commons.lang3.StringUtils.isBlank(exp)){
             throw new Exception("Expression can not be null, It should be, for eg. 1 2 3 + -, 5 1 2 + 4 * + 3 - in such format.");
         }
 
@@ -103,4 +137,5 @@ public class PostfixNotation implements PolishNotation {
         }
         return stack.pop();
     }
+
 }

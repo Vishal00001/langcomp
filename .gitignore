@@ -1,23 +1,20 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
 ### IntelliJ IDEA ###
 .idea
-*.iws
 *.iml
+.metadata
+bin/
+tmp/
+.settings/
+.externalToolBuilders/
+.buildpath
+target/
+.tern-project
+.classpath
+.project
+/target/
+*.iws
 *.ipr
+/**/git.properties
 
 ### NetBeans ###
 /nbproject/private/
